@@ -58,7 +58,6 @@ header nav a.active {
   color: #ffdd00;
 }
 
-/* Menu burger */
 #menu-toggle {
   display: none;
 }
@@ -69,7 +68,6 @@ header nav a.active {
   color: white;
 }
 
-/* HERO avec background + overlay */
 .hero {
   position: relative;
   min-height: 100vh;
