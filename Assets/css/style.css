@@ -140,12 +140,13 @@ header nav a.active {
 }
 
 .news {
-  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
-  color: #333;
+  background: transparent;
+  z-index: 0;
+  color: white;
 }
 
 .news img {
@@ -155,7 +156,7 @@ header nav a.active {
 }
 
 .news h3 {
-  color: #1c70ca;
+  color: #ffdd00;
   margin: 15px;
 }
 
@@ -190,7 +191,7 @@ header nav a.active {
 }
 
 .presentation img {
-  width: 300px;
+  width: 400px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -201,6 +202,7 @@ header nav a.active {
   line-height: 1.6;
   color: white;
 }
+/* QUI SOMMES-NOUS */
 
 /* GALERIE */
 .galerie {
@@ -224,6 +226,155 @@ header nav a.active {
 .galerie img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* GALERIE */
+
+/* LE CLUB */
+
+.story h1 {
+  color: black;
+}
+
+/* LE CLUB */
+
+/* PAGE CONTACT */
+
+.formulaire {
+  display: flex;
+  justify-content: start;
+  margin: 30px 60px 10px;
+}
+
+.formulaire2 {
+  display: flex;
+  justify-content: end;
+  margin: 10px 40px 30px 30px;
+}
+.infos-perso {
+  background-color: #1c70ca;
+  border: 3px solid #ffdd00;
+  width: 600px;
+  margin-right: 30px;
+  border-radius: 10px;
+  padding: 10px 0px 10px 20px;
+  color: white;
+}
+
+.infos-perso input {
+  width: 50%;
+  position: relative;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #1c70ca;
+  border: 3px solid#ffdd00;
+  color: white;
+  font-size: 14px;
+  padding-right: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+.profil {
+  width: 600px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  background-color: #1c70ca;
+  border: 3px solid#ffdd00;
+  border-radius: 10px;
+}
+
+#photo {
+  margin-top: 10px;
+  color: white;
+}
+
+#preview {
+  border: 3px solid#ffdd00;
+}
+
+.profil input {
+  display: flex;
+  align-items: start;
+  margin-top: 10px;
+}
+
+.profil label {
+  padding-top: 3px;
+  padding-bottom: 2px;
+  color: white;
+}
+
+.profil input {
+  width: 50%;
+  position: relative;
+  border-radius: 5px;
+  padding: 5px;
+  background: transparent;
+  font-weight: bold;
+  color: white;
+  border: 3px solid #ffdd00;
+  outline: none;
+  font-size: 11px;
+}
+
+h3 {
+  padding-top: 10px;
+  color: white;
+}
+h2 {
+  font-weight: bold;
+  color: white;
+}
+
+.logo2 {
+  position: absolute;
+  top: 170px;
+  right: 230px;
+}
+
+.logo2 img {
+  width: 20rem;
+  height: 20rem;
+}
+
+#texte {
+  min-width: 300px;
+  min-height: 100px;
+  max-width: 300px;
+  max-height: 100px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.924);
+}
+
+textarea {
+  border-radius: 5px;
+  border: none;
+}
+
+textarea::placeholder {
+  font-size: 13px;
+}
+
+#date {
+  color: white;
 }
 
 /* FOOTER */
@@ -277,6 +428,8 @@ footer {
   color: #ffffff;
   text-decoration: none;
 }
+
+/* FOOTER */
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
