@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Marseille XIII - Fan Page</title>
 <link rel="stylesheet" href="/Assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <header>
@@ -21,44 +21,78 @@
     <nav>
     <ul>
         <li><a href="Accueil.html">Accueil</a></li>
-        <li><a href="histoire.html">Histoire</a></li>
         <li><a href="club.html">Le Club</a></li>
         <li><a href="galerie.html">Galerie</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
     </nav>
 </header>
+
 <body> 
 
+<section class="formulaire"> 
+  <div class="infos-perso">
+    <h2>Formulaire de contact</h2>
+    <form> 
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom...">
 
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" placeholder="Entrez votre nom...">
 
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Entrez votre adresse e-mail...">
 
+      <label for="age">Âge</label>
+      <input type="number" id="age" name="age" placeholder="Entrez votre âge...">
 
+      <label for="genre">Genre</label>
+      <select id="genre" name="genre"> 
+        <option value="">Choisissez votre genre</option>
+        <option value="femme">Femme</option>
+        <option value="homme">Homme</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..."></textarea>
+
+      <input type="submit" name="ok" value="Envoyer !">
+    </form> 
+  </div>
+</section>
 
 
 
 </body>
-<footer> 
-<div class="footer"> 
-    <div class="localisation"> 
-    <p><span>Localisation 📍</span><br> 23  bd Simon Bolivar <br> 13015 Marseille</p>
+<footer>
+<div class="footer-container">
+    
+    <div class="footer-section about">
+    <h3>À propos</h3>
+   <p>Bienvenue sur le fan site de Marseille XIII ! Ici, partageons notre passion pour le club, ses joueurs et son histoire.</p>
     </div>
 
-    <div class="contact"> 
-    <p><span> Contact 📩 📞</span><br>
-    Mail : contact@marseille-treize.com <br>
-    Tel : 04 91 13 13 16 </p>
+    <div class="footer-section contact">
+    <h3>Contact</h3>
+    <p>📍 23 bd Simon Bolivar, 13015 Marseille</p>
+    <p>📧 contact@marseille-treize.com</p>
+    <p>📞 04 91 13 13 16</p>
     </div>
 
+    <div class="footer-section social">
+    <h3>Suivez-nous</h3>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/?locale=fr_FR" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/fr" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/?hl=fr" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    </div>
 
-    <div class="social-media"> 
-    <p>Nos réseaux sociaux 📲</p> 
-    <div class="social-icon">
-        <a href="https://www.facebook.com/?locale=fr_FR"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.tiktok.com/fr"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://www.instagram.com/?hl=fr"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    </div>
+</div>
+
+<div class="footer-bottom">
+    <p>Marseille Treize. Tous droits réservés. &copy; 2025 </p>
 </div>
 </footer>
 </body>

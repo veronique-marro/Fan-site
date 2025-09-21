@@ -1,15 +1,16 @@
-/* RESET */
-body,
-h1,
-h2,
-p,
-ul {
+/* == RESET == */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
-/* HEADER */
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+/* == HEADER == */
 header {
   background: #1c70ca;
   color: white;
@@ -19,21 +20,27 @@ header {
   flex-wrap: wrap;
   position: relative;
   z-index: 10;
+  padding: 10px 20px;
+  max-width: 100%;
 }
 
 header .logo {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
 header .logo img {
-  height: 90px;
+  height: 70px;
   border-radius: 50px;
+  margin-top: 10px;
 }
 
 .logo h1 {
   font-size: 30px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 /* Menu Desktop */
@@ -51,9 +58,7 @@ header nav a {
   transition: 0.3s;
 }
 
-header nav a:hover {
-  color: #ffdd00;
-}
+header nav a:hover,
 header nav a.active {
   color: #ffdd00;
 }
@@ -61,6 +66,7 @@ header nav a.active {
 #menu-toggle {
   display: none;
 }
+
 .menu-icon {
   display: none;
   font-size: 2em;
@@ -68,6 +74,7 @@ header nav a.active {
   color: white;
 }
 
+/* ======== HERO ======= */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -80,6 +87,8 @@ header nav a.active {
   align-items: flex-start;
   padding: 40px 20px;
   color: white;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero::before {
@@ -101,7 +110,6 @@ header nav a.active {
   max-width: 1200px;
 }
 
-/* Hero text */
 .hero-text {
   text-align: center;
   margin-bottom: 60px;
@@ -116,7 +124,7 @@ header nav a.active {
   font-size: 20px;
 }
 
-/* Actualités */
+/* ==== ACTUALITES ==== */
 .actualites {
   text-align: center;
   margin-bottom: 60px;
@@ -132,15 +140,17 @@ header nav a.active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  width: 100%;
 }
 
 .news {
-  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
-  color: #333;
+  background: transparent;
+  z-index: 0;
+  color: white;
 }
 
 .news img {
@@ -150,7 +160,7 @@ header nav a.active {
 }
 
 .news h3 {
-  color: #1c70ca;
+  color: #ffdd00;
   margin: 15px;
 }
 
@@ -163,7 +173,7 @@ header nav a.active {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Qui sommes-nous */
+/* ====== QUI SOMMES-NOUS ===== */
 .qui-sommes-nous {
   text-align: center;
   margin-bottom: 60px;
@@ -181,10 +191,11 @@ header nav a.active {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .presentation img {
-  width: 300px;
+  width: 400px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -196,12 +207,13 @@ header nav a.active {
   color: white;
 }
 
-/* Galerie */
+/* ======= GALERIE ====== */
 .galerie {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  padding: 20px 0;
+  padding: 20px;
+  width: 100%;
 }
 
 .galerie img {
@@ -219,60 +231,224 @@ header nav a.active {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* FOOTER */
-footer {
-  position: relative;
-  width: 100%;
-  background: #1c70ca;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: auto;
-  font-size: 20px;
+/* ======== PAGE LE CLUB ====== */
+.palmares,
+.identite,
+.story,
+.stade {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.social-icon {
+section h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #004080;
+  border-left: 6px solid #ffdd00;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+section p {
+  font-size: 1.1em;
+  line-height: 1.7rem;
+}
+
+section ul {
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+section li {
+  margin-bottom: 8px;
+}
+
+.stade img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== CONTACT ===== */
+.formulaire {
   display: flex;
-  flex-direction: row;
-  gap: 15px;
-  font-size: 24px;
-  align-items: center;
   justify-content: center;
-}
-
-.social-icon i:hover {
-  color: #ffdd00;
-  transform: scale(1.2);
-  cursor: pointer;
-}
-
-.social-icon a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  flex-wrap: wrap;
+  margin: 50px 0;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.footer .localisation span,
-.footer .contact span,
-.footer .social-media p {
-  font-size: 25px;
+.infos-perso {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 30px 40px;
+  background-color: #1c70ca;
+  border: 3px solid #ffdd00;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.infos-perso h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
   font-weight: bold;
+  text-transform: uppercase;
+  color: #ffdd00;
 }
 
-.footer p {
-  font-size: 18px;
+.infos-perso label {
+  margin-right: 22rem;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
   font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+.infos-perso input,
+.infos-perso select,
+.infos-perso textarea {
+  width: 80%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  outline: none;
+  background-color: #1c70ca;
+  border: 2px solid #ffdd00;
+  color: white;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.infos-perso input:focus,
+.infos-perso select:focus,
+.infos-perso textarea:focus {
+  border-color: white;
+  box-shadow: 0 0 6px rgba(255, 221, 0, 0.9);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.infos-perso input[type="submit"] {
+  width: 40%;
+  margin: 25px auto 0 auto;
+  display: block;
+  background: #ffdd00;
+  color: #1c70ca;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.infos-perso input[type="submit"]:hover {
+  background: white;
+  color: #1c70ca;
+  transform: scale(1.05);
+}
+
+/* ====== FOOTER ==== */
+footer {
+  background-color: #1c70ca;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-section {
+  width: 90%;
+  max-width: 400px;
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.footer-section h3 {
+  color: #ffdd00;
+  margin: 3px 0;
+  font-size: 1.5rem;
+}
+
+.footer-section p {
+  margin: 2px 0;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 5px 0px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.3);
+  color: #ffdd00;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ======= RESPONSIVE ======= */
+@media screen and (max-width: 768px) {
+  .infos-perso {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .infos-perso label {
+    margin-right: 25rem;
+  }
+  .infos-perso input,
+  .infos-perso select,
+  .infos-perso textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .infos-perso input[type="submit"] {
+    width: 100%;
+    font-size: 15px;
+  }
+
   .menu-icon {
     display: block;
   }
@@ -296,12 +472,6 @@ footer {
 
   header nav ul li {
     margin: 0.5em 0;
-  }
-
-  .footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 1em;
   }
 
   .presentation {
@@ -333,8 +503,26 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .galerie img {
     height: 120px;
+  }
+}
+
+/* Footer Desktop */
+@media screen and (min-width: 769px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-section {
+    width: 1fr;
+    max-width: none;
+    padding: 0;
   }
 }
